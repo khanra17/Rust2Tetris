@@ -40,7 +40,11 @@ impl Xor {
     ///
     /// The logical Xor of the inputs.
     pub fn evaluate(&self, a: Bit, b: Bit) -> Bit {
-        unimplemented!()
+        let not_a = self.not.evaluate(a);
+        let not_b = self.not.evaluate(b);
+        let not_a_and_b = self.and.evaluate(not_a, b);
+        let a_and_not_b = self.and.evaluate(a, not_b);
+        self.or.evaluate(not_a_and_b, a_and_not_b)
     }
 }
 
