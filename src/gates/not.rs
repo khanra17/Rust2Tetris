@@ -20,7 +20,10 @@ impl Not {
     ///
     /// The logical NOT of the input.
     pub fn evaluate(&self, input: Bit) -> Bit {
-        unimplemented!()
+        match input {
+            Bit::Zero => Bit::One,
+            Bit::One => Bit::Zero,
+        }
     }
 }
 
