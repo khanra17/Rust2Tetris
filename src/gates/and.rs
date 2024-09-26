@@ -21,7 +21,12 @@ impl And {
     ///
     /// The logical AND of the inputs.
     pub fn evaluate(&self, a: Bit, b: Bit) -> Bit {
-        unimplemented!()
+        match (a, b) {
+            (Bit::Zero, Bit::Zero) => Bit::Zero,
+            (Bit::Zero, Bit::One) => Bit::Zero,
+            (Bit::One, Bit::Zero) => Bit::Zero,
+            (Bit::One, Bit::One) => Bit::One,
+        }
     }
 }
 
