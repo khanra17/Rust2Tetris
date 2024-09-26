@@ -1,6 +1,12 @@
 use super::bit::Bit;
 
 /// Represents a NOT gate.
+///
+/// Truth Table:
+/// | Input | Output |
+/// |-------|--------|
+/// | 0     | 1      |
+/// | 1     | 0      |
 #[derive(Debug, Clone, Copy)]
 pub struct Not;
 

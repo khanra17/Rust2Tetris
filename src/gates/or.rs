@@ -1,6 +1,14 @@
 use super::bit::Bit;
 
 /// Represents an OR gate.
+///
+/// Truth Table:
+/// | A | B | Output |
+/// |---|---|--------|
+/// | 0 | 0 | 0      |
+/// | 0 | 1 | 1      |
+/// | 1 | 0 | 1      |
+/// | 1 | 1 | 1      |
 #[derive(Debug, Clone, Copy)]
 pub struct Or;
 
